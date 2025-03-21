@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link href="style.css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Etch-a-Sketch</title>
+  </head>
+  <body>
+    <div id="container">
+      <div id="gameCanvas">
+        <div id="gridCanvas"></div>
+          <div class="buttonsLeft">
+            <div class="sliderContainer">
+              <label for="sizeSlider" class="sliderText">Grid Size</label>
+              <label for="SliderValue" id="sliderValue"></label>
+              <input
+                type="range"
+                id="sizeSlider"
+                name="sizeSlider"
+                min="16"
+                max="96"
+                value="16"
+                step="16"
+                onchange="changeValue()"
+              />
+            </div>
+              <button class="clearButton" onclick="clearGrid()">Clear</button>
+              <div style="display: flex; flex-direction: column; justify-content: center;align-items: center;" class="Picker">
+                <label for="color">Paint Color</label>
+                <input type="color" id="colorPicker" value="#000000">
+              </div>
+              <button id="randomColorButton">Random Colors: OFF</button>
+          </div>
+          
+          <div class="topIcons">
+            <div>
+              <p class="topText">Draw</p>
+              <img
+                width="48"
+                height="48"
+                src="https://img.icons8.com/badges/48/mouse-left-click.png"
+                alt="mouse-left-click"
+              />
+            </div>
+            <div>
+              <p class="topText">Erase</p>
+              <img
+                width="48"
+                height="48"
+                src="https://img.icons8.com/badges/48/mouse-right-click.png"
+                alt="mouse-right-click"
+              />
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
+<div class="buttonsLeft">
+</div>

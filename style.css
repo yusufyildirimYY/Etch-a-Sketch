@@ -1,0 +1,181 @@
+html,
+body {
+  margin: 0px;
+  padding: 0px;
+}
+#container {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(
+    24deg,
+    rgba(255, 255, 255, 1) 0%,
+    rgba(87, 87, 87, 1) 100%
+  );
+}
+
+#gameCanvas {
+  height: 650px;
+  width: 650px;
+  border-left-width: 200px;
+  border-right-width: 100px;
+  border-block-width: 100px;
+  border-style: solid;
+  border-color: rgb(224, 2, 5);
+  border-radius: 100px;
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  background-color: white;
+}
+
+#gridCanvas {
+  display: flex;
+  flex-wrap: wrap;
+  position: relative;
+  outline: 5px solid rgb(255, 100, 0);
+  border-radius: 10px;
+}
+
+.grids {
+  aspect-ratio: 1 / 1;
+  border-width: 0.01rem;
+  border-style: solid;
+  border-color: rgba(128, 128, 128, 0.3);
+  box-sizing: border-box;
+}
+
+.buttonsLeft {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  gap: 80px;
+  left: -180px;
+}
+
+.topIcons {
+  position: absolute;
+  display: flex;
+  gap: 20px;
+  top: -85px;
+  left: 10px;
+}
+
+.topText {
+  text-align: center;
+  font-family: sans-serif, serif;
+  font-weight: bold;
+  font-size: large;
+  margin: 0px;
+  margin-bottom: 5px;
+}
+
+.sliderContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-size: 30px;
+  font-weight: bold;
+  font-family: sans-serif, serif;
+  color: black;
+  gap: 10px;
+}
+
+.sliderText {
+  text-shadow: 3px 2px 1px rgb(255, 100, 0);
+}
+input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  cursor: pointer;
+}
+
+/* Removes default focus */
+input[type="range"]:focus {
+  outline: none;
+}
+/* slider track */
+input[type="range"]::-webkit-slider-runnable-track {
+  background-color: #ff6400;
+  border-radius: 1.5rem;
+  height: 1rem;
+}
+
+/* slider thumb */
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  margin-top: -8px; /* Centers thumb on the track */
+  background-color: #ff0000;
+  border-radius: 4rem;
+  height: 2rem;
+  width: 0.8rem;
+  outline: 1px solid black;
+}
+
+.clearButton {
+  box-shadow: 5px 5px 0px 0px rgba(255, 102, 0, 1);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 20px;
+  font-weight: bold;
+  font-family: sans-serif, serif;
+  color: white;
+  background-color: black;
+  border: none;
+  transition: all 0.2s ease-in-out;
+}
+.clearButton:hover {
+  transform: scale(1.03);
+}
+.clearButton:active {
+  box-shadow: 2px 2px 0px 1px rgba(255, 102, 0, 1);
+  transform: translateY(1px);
+  transform: translateX(1px);
+}
+
+.Picker {
+  font-size: 30px;
+  font-weight: bold;
+  font-family: sans-serif, serif;
+  color: black;
+  gap: 10px;
+  text-shadow: 3px 2px 1px rgb(255, 100, 0);
+}
+
+#colorPicker {
+  appearance: none;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  background: rgb(255, 100, 0);
+  border: 0;
+  cursor: pointer;
+  height: 5rem;
+  padding: 0px 2px;
+  width: 10rem;
+}
+#randomColorButton {
+  box-shadow: 5px 5px 0px 0px rgba(255, 102, 0, 1);
+  border-radius: 10px;
+  padding: 10px;
+  font-size: 15px;
+  font-weight: bold;
+  font-family: sans-serif, serif;
+  color: white;
+  border: none;
+  background-color: black;
+  transition: all 0.2s ease-in-out;
+  width: 10rem;
+}
+#randomColorButton:hover {
+  transform: scale(1.03);
+}
+#randomColorButton:active {
+  box-shadow: 2px 2px 0px 1px rgba(255, 102, 0, 1);
+  transform: translateY(1px);
+  transform: translateX(1px);
+}
